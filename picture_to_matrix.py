@@ -92,7 +92,7 @@ class PictureToMartix:
             for i in range(width):
                 for j in range(height):
                     color = image.getpixel((j, i))
-                    if (color[0] + color[1] + color[2] == 0):
+                    if (color[0] + color[1] + color[2] < 150*3):
                         fh.write('1')
                     else:
                         fh.write('0')
